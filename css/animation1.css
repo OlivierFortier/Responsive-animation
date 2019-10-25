@@ -1,0 +1,63 @@
+/*animation de ballon  sur terrain de soccer*/
+.animation1 {
+    background-image: url("../images/terrain-soccer.png");
+    background-size: cover;
+    background-position: center;
+    perspective-origin: top center;
+    perspective: 20000px;
+    transform-origin: top left;
+    transition: transform 1.5s ease-in-out;
+    cursor: pointer;
+}
+
+/*texte qui indique comment démarrer l'animation*/
+h4 {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+}
+
+.animation1:hover {
+    transform: rotateX(45deg) rotateY(20deg);
+}
+
+.ballon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    align-self: flex-end;
+    font-size: 3rem;
+    transform-origin: center;
+}
+
+.animBallon {
+    transition: transform 1s ease-out;
+    animation: kickBallon 5s alternate-reverse infinite;
+}
+
+@keyframes kickBallon {
+    from {
+        transform: translate(0, 20%);
+        animation-timing-function: cubic-bezier(.28, .88, .81, .13);
+    }
+
+    25% {
+        transform: translate(675%, 20%) rotateZ(180deg);
+        animation-timing-function: cubic-bezier(.91, .19, .39, .9);
+    }
+
+    50% {
+        transform: translate(10%, -400%) rotateZ(360deg);
+        animation-timing-function: cubic-bezier(.79, .86, .05, .8);
+    }
+
+    75% {
+        transform: translate(675%, -1000%) rotateZ(540deg);
+        animation-timing-function: cubic-bezier(.79, .86, .94, -0.64);
+    }
+
+    to {
+        transform: translate(0, 20%) rotateZ(720deg);
+        animation-timing-function: cubic-bezier(.64, -0.1, 0, .55);
+    }
+}

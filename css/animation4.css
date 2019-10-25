@@ -1,0 +1,61 @@
+.arc {
+    display: flex;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+        0 2px 2px rgba(0, 0, 0, 0.12),
+        0 4px 4px rgba(0, 0, 0, 0.12),
+        0 8px 8px rgba(0, 0, 0, 0.12),
+        0 16px 16px rgba(0, 0, 0, 0.12);
+    transition: transform 1s;
+    transform: scale(2, 2);
+}
+
+.animation4 {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.rouge {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+}
+
+.bleu {
+    background-color: blue;
+    width: 175px;
+    height: 175px;
+    z-index: 11;
+}
+
+.vert {
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    z-index: 12;
+}
+
+.jaune {
+    background-color: yellow;
+    width: 125px;
+    height: 125px;
+    z-index: 13;
+}
+
+.orange {
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    z-index: 14;
+}
+
+.mauve {
+    background-color: purple;
+    width: 75px;
+    height: 75px;
+    z-index: 15;
+}

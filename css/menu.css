@@ -1,0 +1,195 @@
+/* styles de base */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'nunito', sans-serif;
+}
+
+nav {
+    background: #222;
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+.button.seconaidre {
+    border-bottom: 1px #444 solid;
+}
+
+/*Styles pour les boutons du menu*/
+.boutonMenu {
+    position: relative;
+}
+
+.boutonMenu::before,
+.boutonMenu::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #3cffa4;
+    transform-origin: center;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.boutonMenu::before {
+    top: 0;
+}
+
+.boutonMenu::after {
+    bottom: 0;
+}
+
+.boutonMenu:hover::before,
+.boutonMenu:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+
+
+
+/* Mobile */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s;
+}
+
+.item.active {
+    display: block;
+    opacity: 1;
+}
+
+
+/* Tablette */
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 0;
+    }
+
+    .toggle {
+        flex: 1;
+        text-align: right;
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order: 2;
+    }
+
+    .button.seconaidre {
+        border: 0;
+    }
+
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+    }
+
+    .button.seconaidre a {
+        background: transparent;
+    }
+
+    .button a:hover {
+        text-decoration: none;
+    }
+
+    .button:not(.seconaidre) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+
+    .button.seconaidre a:hover {
+        color: #ddd;
+    }
+}
+
+
+/* Desktop*/
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+        opacity: 1;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .menu li {
+        padding: 15px 10px;
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,159 @@
+.animation3 {
+  padding: 3%;
+  flex-wrap: wrap;
+}
+
+.animation3>* {
+  margin: 5%;
+}
+
+
+/*animation des 9 petits points et disposition avec css grid*/
+.points {
+  width: 3em;
+  height: 3em;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.points>div {
+  width: 0.5em;
+  height: 0.5em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+    0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12),
+    0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  background-color: #dd2490;
+  animation: disparaitre 1.5s alternate ease-in-out infinite;
+}
+
+.point {
+  border-radius: 50%;
+}
+
+.points>div:nth-of-type(2),
+.points>div:nth-of-type(4) {
+  animation-delay: 0.25s;
+}
+
+.points>div:nth-of-type(3),
+.points>div:nth-of-type(5),
+.points>div:nth-of-type(7) {
+  animation-delay: 0.5s;
+}
+
+.points>div:nth-of-type(6),
+.points>div:nth-of-type(8) {
+  animation-delay: 0.75s;
+}
+
+.points>div:nth-of-type(9) {
+  animation-delay: 1s;
+}
+
+@keyframes disparaitre {
+  to {
+    opacity: 0.2;
+  }
+}
+
+
+/*animation du bouton qu'on peut survoler*/
+.bouton1 {
+  z-index: 1;
+  border-radius: 5%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+    0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12),
+    0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  height: 10%;
+}
+
+.bouton1::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #3cefff;
+  transform-origin: center;
+  transform: translate3d(50%, 50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.bouton1:hover {
+  cursor: pointer;
+  color: #161616;
+}
+
+.bouton1:hover::before {
+  transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+}
+
+
+/*animation du carré qui tourne et se remplit*/
+.carre {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: 3px solid #3cefff;
+  overflow: hidden;
+  animation: tourner 3s ease infinite;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+    0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12),
+    0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.carre::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 2em;
+  height: 2em;
+  background-color: hsla(246, 76%, 28%, 0.75);
+  transform-origin: center bottom;
+  transform: scaleY(1);
+  animation: remplir 3s linear infinite;
+}
+
+@keyframes tourner {
+
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes remplir {
+
+  25%,
+  50% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}

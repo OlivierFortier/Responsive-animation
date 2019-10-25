@@ -1,0 +1,183 @@
+/*importation des polices de caractère*/
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/*mettre le curseur en pointeur lors du survol des éléments à cliquer*/
+a {
+    cursor: pointer;
+}
+
+a>i {
+    cursor: pointer;
+}
+
+/*conteneur principal de la page*/
+.conteneur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+/*style pour le menu*/
+.barre-menu {
+    margin-bottom: 5%;
+    position: sticky !important;
+    top: 0;
+    z-index: 69696969;
+    height: 55px;
+    transition: height 0.5s;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+        0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07),
+        0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07),
+        0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+/*hauteur du menu lorsqu'il est activé en mobile*/
+.barre-menu.activated {
+    height: 255px;
+}
+
+/*styles pour le titre*/
+.titre {
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 3%;
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+    color: white;
+    height: 35px;
+}
+
+span .txt-change {
+    min-height: 35px;
+}
+
+span .wrap {
+    min-height: 35px;
+}
+
+/*arrangement et disposition du contenu principal en flexbox*/
+.contenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenu>* {
+    margin: 5%;
+}
+
+/*styles de base des cartes contenant les animations*/
+.cartes {
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    max-height: 30rem;
+    height: 25rem;
+    max-width: 15rem;
+    ;
+    width: 20rem;
+    align-self: center;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
+        0 2px 2px rgba(0, 0, 0, 0.12),
+        0 4px 4px rgba(0, 0, 0, 0.12),
+        0 8px 8px rgba(0, 0, 0, 0.12),
+        0 16px 16px rgba(0, 0, 0, 0.12);
+    font-size: 1rem;
+}
+
+/*styles du footer*/
+footer {
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    display: flex;
+    height: 100px;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer>h2>a>i {
+    font-size: 2rem;
+    transition: text-shadow 0.5s;
+}
+
+/*effet au survol des boutons du footer*/
+footer>h2>a>i:hover {
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+
+/*classes pour les thèmes sombre*/
+.theme-sombre-menu {
+    background: darkslategray;
+}
+
+.theme-sombre-conteneur {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+}
+
+.theme-sombre-footer {
+    background: darkslategray;
+}
+
+/*Media queries pour les tablettes et desktop*/
+@media all and (min-width: 600px) {
+
+    /*contexte flex en colonne pour les tablettes*/
+    .contenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer>h2>a>i {
+        font-size: 3rem;
+    }
+}
+
+@media all and (min-width: 900px) {
+
+    /*contexte flex en rangée pour les grands-écrans*/
+    .contenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}

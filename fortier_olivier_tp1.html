@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Programmation Animation 2 - TP1</title>
+    <meta name="description"
+        content="Création d'une page Web animée avec CSS/JavaScript s'adaptant à différents périphériques">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/886f9c21a7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/animation1.css">
+    <link rel="stylesheet" href="css/animation2.css">
+    <link rel="stylesheet" href="css/animation3.css">
+    <link rel="stylesheet" href="css/animation4.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+    <div class="conteneur">
+        <nav class="barre-menu">
+            <ul class="menu">
+                <li class="logo"><a>TP1 Animations</a></li>
+                <li class="item"><a class="boutonMenu">Thème sombre</a></li>
+                <li class="item"><a class="boutonMenu">Arrondir le tout !</a></li>
+                <li class="item"><a class="boutonMenu">Rendre tout carré !</a></li>
+                <li class="item"><a class="boutonMenu">Remettre par défaut</a></li>
+                <li class="toggle"><a><i class="material-icons"> menu </i></a></li>
+            </ul>
+        </nav>
+        <h1 class="titre"> <span class="txt-change" data-temps="2000"
+                data-change='[ "Prog anim 2", "TP1.", "Animations JS/CSS","Olivier Fortier"]'></span> </h1>
+        <div class="contenu">
+            <div class="cartes animation1">
+                <h4>Cliquez pour jouer l'animation</h4> <i class="material-icons ballon"> sports_soccer </i>
+            </div>
+            <div class="cartes animation2 flip-vertical-fwd">
+                <h3>Retourner</h3>
+            </div>
+            <div class="cartes animation3">
+                <h1>Collection de petites animations</h1>
+                <div class="points">
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                    <div class="point"></div>
+                </div>
+                <button class="bouton1">Cliquer!</button>
+                <div class="carre"></div>
+
+            </div>
+            <div class="cartes animation4">
+                <div class="arc rouge"></div>
+                <div class="arc bleu"></div>
+                <div class="arc vert"></div>
+                <div class="arc jaune"></div>
+                <div class="arc orange"></div>
+                <div class="arc mauve"></div>
+            </div>
+        </div>
+        <footer>
+            <h2><a href="https://www.linkedin.com/in/olivier-fortier-a1502912b/"><i class="fab fa-linkedin-in"></i></a>
+            </h2>
+            <h2><a href="https://olivierfortier.github.io/"><i class="fab fa-github"></i></a></h2>
+            <h2><a href="https://www.behance.net/OliFortier"><i class="fab fa-behance"></i></a></h2>
+        </footer>
+    </div>
+    <script src="js/application.js" async defer></script>
+    <script src="js/anim-titre.js" async defer></script>
+</body>
+
+</html>
