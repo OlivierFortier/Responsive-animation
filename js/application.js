@@ -125,24 +125,14 @@ setInterval(() => {
         boutonCliquer.style.borderRadius = "50%";
         leCarre.style.borderRadius = "50%";
 
-        const [p1, p2, p3, p4, p5, p6, p7, p8, p9] = lesPoints;
-        p1.style.borderRadius = "50%";
-        p2.style.borderRadius = "50%";
-        p3.style.borderRadius = "50%";
-        p4.style.borderRadius = "50%";
-        p5.style.borderRadius = "50%";
-        p6.style.borderRadius = "50%";
-        p7.style.borderRadius = "50%";
-        p8.style.borderRadius = "50%";
-        p9.style.borderRadius = "50%";
+        for (const point of lesPoints) {
+            point.style.borderRadius = "50%";
+        };
 
-        const [a1, a2, a3, a4, a5, a6] = arcEnCiel;
-        a1.style.borderRadius = "50%";
-        a2.style.borderRadius = "50%";
-        a3.style.borderRadius = "50%";
-        a4.style.borderRadius = "50%";
-        a5.style.borderRadius = "50%";
-        a6.style.borderRadius = "50%";
+        for (const arc of arcEnCiel) {
+            arc.style.borderRadius = "50%";
+        };
+        
 
         for (let carte of lesCartes) {
             carte.style.borderRadius = "50%";
@@ -169,23 +159,13 @@ setInterval(() => {
         leCarre.style.borderRadius = "0%";
 
         const [p1, p2, p3, p4, p5, p6, p7, p8, p9] = lesPoints;
-        p1.style.borderRadius = "0%";
-        p2.style.borderRadius = "0%";
-        p3.style.borderRadius = "0%";
-        p4.style.borderRadius = "0%";
-        p5.style.borderRadius = "0%";
-        p6.style.borderRadius = "0%";
-        p7.style.borderRadius = "0%";
-        p8.style.borderRadius = "0%";
-        p9.style.borderRadius = "0%";
+        for (const point of lesPoints) {
+            point.style.borderRadius = "0%";
+        };
 
-        const [a1, a2, a3, a4, a5, a6] = arcEnCiel;
-        a1.style.borderRadius = "0%";
-        a2.style.borderRadius = "0%";
-        a3.style.borderRadius = "0%";
-        a4.style.borderRadius = "0%";
-        a5.style.borderRadius = "0%";
-        a6.style.borderRadius = "0%";
+        for (const arc of arcEnCiel) {
+            arc.style.borderRadius = "0%";
+        };
 
         for (let carte of lesCartes) {
             carte.style.borderRadius = "0%";
