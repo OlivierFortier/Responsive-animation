@@ -13,8 +13,8 @@
 
         //désactiver le menu
         if (lesItems[0].classList.contains("active")) {
-            for (let item in lesItems) {
-                lesItems[item].classList.remove("active");
+            for (let item of lesItems) {
+                item.classList.remove("active");
                 iconesAImage.innerText = "menu";
                 document.querySelector(".barre-menu").classList.remove("activated");
                 
@@ -22,8 +22,8 @@
 
         //activer le menu
         } else {
-            for (let i in lesItems) {
-                lesItems[i].classList.add("active");
+            for (let item of lesItems) {
+                item.classList.add("active");
                 iconesAImage.innerText = "cancel";
                 document.querySelector(".barre-menu").classList.add("activated");
                 
@@ -39,8 +39,8 @@ window.onresize = () => {
     const iconesAImage = document.querySelector(".toggle > a > i");
     if (window.innerWidth >= 900) {
         if (lesItems[0].classList.contains("active")) {
-            for (let item in lesItems) {
-                lesItems[item].classList.remove("active");
+            for (let item of lesItems) {
+                item.classList.remove("active");
                 iconesAImage.innerText = "menu";
                 document.querySelector(".barre-menu").classList.remove("activated");
                 
@@ -144,8 +144,8 @@ setInterval(() => {
         a5.style.borderRadius = "50%";
         a6.style.borderRadius = "50%";
 
-        for (let carte in lesCartes) {
-            lesCartes[carte].style.borderRadius = "50%";
+        for (let carte of lesCartes) {
+            carte.style.borderRadius = "50%";
         };
 
     });
@@ -187,8 +187,8 @@ setInterval(() => {
         a5.style.borderRadius = "0%";
         a6.style.borderRadius = "0%";
 
-        for (let carte in lesCartes) {
-            lesCartes[carte].style.borderRadius = "0%";
+        for (let carte of lesCartes) {
+            carte.style.borderRadius = "0%";
         };
         
 
